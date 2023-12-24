@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('commercial_name');
             $table->string('client_name');
             $table->string('client_email');
+            $table->string('client_phone');
             $table->string('color');
             $table->string('domain');
             $table->string('server');
