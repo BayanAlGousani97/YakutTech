@@ -8,7 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Info extends Model
 {
     use HasFactory;
-    public $fillable=[
-        'name','email','slogan','logo','title','phone','description',
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    public $fillable = [
+        'name', 'email', 'slogan', 'logo', 'title', 'phone', 'description',
     ];
 }

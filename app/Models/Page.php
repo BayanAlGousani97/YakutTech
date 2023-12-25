@@ -8,11 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Page extends Model
 {
     use HasFactory;
-    public $fillable=[
-        'name','description','offer_id',
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    public $fillable = [
+        'name', 'description', 'offer_id',
     ];
 
-    public function offer(){
+    public function offer()
+    {
         return $this->belongsTo(Offer::class);
     }
 }

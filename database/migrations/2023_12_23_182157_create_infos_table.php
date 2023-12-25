@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('logo');
             $table->string('title');
             $table->string('phone');
-            $table->string('description');
+            $table->text('description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('media_files', function (Blueprint $table) {
             $table->id();
-            $table->string('file_name', 999);
+            $table->string('file_name');
             $table->unsignedBigInteger('offer_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
