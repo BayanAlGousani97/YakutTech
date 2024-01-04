@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\View\MainController as ViewMainController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MainController;
+//use App\Http\Controllers\Admin\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +33,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-<<<<<<< HEAD
-Route::get('/{page}', [MainController::class,'index']);
-=======
+
 Route::get('/', [ViewMainController::class, 'index']);
->>>>>>> f48c548850b53c91e0e91e99e8df59b3ca3e2595
+
