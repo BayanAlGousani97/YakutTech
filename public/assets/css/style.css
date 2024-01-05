@@ -1,0 +1,376 @@
+:root {
+
+    --red-color: #b3050e;
+    --main-color:#f5f0f0;
+    --brown-color:#935656;
+}
+body {
+    font-family: 'Lora', serif;
+font-family: 'Noto Sans Kawi', sans-serif;
+font-family: 'Roboto', sans-serif;
+   
+    
+}
+.navbar {
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+nav img{
+    width: 130px;
+}
+h1,h3,p{
+    font-family: 'Lora', serif;
+    background-image: linear-gradient(to right,black,#6A0000 ,#935656);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.main-btn{
+    background-color:var(--red-color) ;
+    color: white;
+    /* padding: ; */
+
+}
+.btn:hover {
+    
+    transform: translateY(-5px);
+}
+.main-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+/* start navbar */
+.navbar .navbar-nav .nav-link {
+    color: black;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--red-color);
+}
+.navbar .navbar-toggler {
+    font-size: 25px;
+    border-color: black;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+/* end navbar */
+/* start landing */
+.landing{
+    background-color: var(--main-color);
+    min-height: calc(100vh - 72px);
+    background-image: url("../image/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+
+}
+.landing .img  {
+    position: relative;
+    width: 600px;
+    animation: up-and-down 5s linear infinite;
+}
+.d {
+    position: absolute;
+    width: 22%;
+    top: -24%;
+    opacity: 1;
+    animation: down 2s linear;
+    left: -1%;
+    
+    }
+
+
+.y {
+    position: relative;
+    animation: move 1s linear;
+    opacity: 1;
+        }
+
+.s {
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    top: -16%;
+    animation: move 4s linear;
+    
+}
+
+@keyframes move{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+    opacity: 1;
+    }
+
+}
+@keyframes down{
+    0%{
+        opacity: 0;
+        position: absolute;
+        top: -115%;
+        
+    }
+    100%{
+        position: absolute;
+        top: -22%;
+        opacity: 1;
+   
+    }
+}
+
+@keyframes up-and-down {
+    0%,
+    100% {
+      top: 0;
+    }
+    50% {
+      top: -50px;
+    }
+  }
+/* end landing */
+
+
+
+/* start about */
+.head{
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.head h1{
+    
+    font-size: 35px;
+    font-weight: bold;
+    top: 45%;
+    letter-spacing: 3px;
+    color: var(--red-color);
+}
+
+.head .divider{
+    height: 4px;
+    width: 90px;
+    background: linear-gradient(to right,#6A0000 ,#935656);
+    margin: 16px auto;
+}
+
+
+.back img{
+    height: 75vh;
+    width: 90%;
+}
+.one{
+    border: 3px solid #6c757d;
+    /* height: 100%; */
+    padding: 2% 3% 2%;
+    animation: top 2s linear;
+
+}
+.one:hover{
+    background-color: var(--main-color);
+    transform: translateY(-10px);
+}
+i {
+   font-size: 25px;
+   color: var(--red-color);
+
+}
+
+/* @keyframes right{
+    0%{
+        
+        position: absolute;
+        left: -15%;
+        
+    }
+    100%{
+        position: absolute;
+        left: 15%;
+        
+    }
+} */
+@keyframes top{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* end about */
+
+/* start service */
+
+.sec3{
+    background-color: var(--main-color);
+    background-image: url("../image/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+}
+.info p{
+    color: black;
+}
+.circl{
+    background-color: var(--main-color);
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-12%, -12%);
+}
+.box{
+    background-color: white;
+    border: 2px solid #6c757d;
+    border-radius: 3%;
+    transition: all 0.3s ease;
+}
+.pro-sec:hover ,.box:hover{
+    transform: translateY(-10px);
+}
+.circl i{
+    color: var(--red-color);
+    font-size: 27px;
+}
+.box a{
+    text-decoration: none;
+    color: var(--red-color);
+}
+.box:hover a{
+    color: var(--brown-color);
+}
+.box:hover .circl{
+    background-color: #ccc;
+}
+.ico i{
+    font-size: 15px;
+    color: var(--red-color);
+}
+.ico a{
+    color: var(--red-color);
+}
+.box:hover .ico > i,a{
+    color: var(--brown-color);
+}
+/* end service */
+
+/* start project */
+.pro .active{
+    background-color: var(--main-color);
+    color: var(--red-color);
+}
+.pro li{
+
+    cursor: pointer;
+}
+.pro li:not(.active):hover{
+    color: var(--red-color);
+}
+.pro-sec {
+    border: 5px solid #6c757d;
+    overflow: hidden;
+    position: relative;
+    /* background-color:  ; */
+}
+.pro-sec::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #1c1b1bab;
+    width: 100% ;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: translateX(-100%);
+}
+.pro-sec:hover::before{
+    transform: translateX(0);
+}
+.pro-sec:hover .ser{
+    display: block;
+}
+
+/* end project */
+
+/* counter */
+
+.sec5{
+    background-color: var(--main-color);
+    background-image: url("../image/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    padding: 30px;
+   
+}
+
+.sec5 i{
+    font-size: 40px;
+}
+/* end counter */
+
+/* ten */
+
+.tes .testimonial-img {
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+  }
+  
+  .tes h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--brown-color);
+  }
+  
+ .tes h4 {
+    font-size: 14px;
+    color: #999;
+  }
+  .tes p {
+    font-style: italic;
+
+  }
+ 
+  
+   .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid var(--brown-color);
+  }
+ .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+  }
+
+/* end ten */
+
+/* start contact */
+.btn{
+    background-color: var(--red-color);
+    color: white;
+}
+.sec7{
+    background-color: var(--main-color);
+    background-image: url("../image/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+}
+/* end contact */
+/* start footer */
+.img{
+    width: 40%;
+}
+
+
+
+
+

@@ -33,6 +33,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-
+Route::get('/index/', [MainController::class, 'index']);
 Route::get('/', [ViewMainController::class, 'index']);
 
