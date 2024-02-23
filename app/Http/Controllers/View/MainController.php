@@ -14,4 +14,9 @@ class MainController extends Controller
     {
         return view('view.index');
     }
+
+    public function getOffer()
+    {
+        return view('view.offer');
+    }
 }

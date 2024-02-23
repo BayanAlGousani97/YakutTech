@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
 
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
@@ -33,6 +30,5 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/index/', [MainController::class, 'index']);
 Route::get('/', [ViewMainController::class, 'index']);
-
+Route::get('/get-offer', [ViewMainController::class, 'getOffer'])->name('getOffer');
