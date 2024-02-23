@@ -31,8 +31,7 @@ h1,h3,p{
 
 }
 .btn:hover {
-
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 .main-btn:hover{
     background-color: black;
@@ -163,14 +162,14 @@ h1,h3,p{
     width: 90%;
 }
 .one{
-    border: 3px solid #6c757d;
+    /* border: 3px solid #6c757d; */
     /* height: 100%; */
+    background-color: var(--main-color);
     padding: 2% 3% 2%;
     animation: top 2s linear;
 
 }
 .one:hover{
-    background-color: var(--main-color);
     transform: translateY(-10px);
 }
 i {
@@ -215,16 +214,16 @@ i {
     color: black;
 }
 .circl{
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     width: 20%;
     height: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     transform: translate(-12%, -12%);
 }
 .box{
     background-color: white;
-    border: 2px solid #6c757d;
-    border-radius: 3%;
+    /* border: 2px solid #6c757d; */
+    /* border-radius: 3%; */
     transition: all 0.3s ease;
 }
 .pro-sec:hover ,.box:hover{
@@ -241,9 +240,7 @@ i {
 .box:hover a{
     color: var(--brown-color);
 }
-.box:hover .circl{
-    background-color: #ccc;
-}
+
 .ico i{
     font-size: 15px;
     color: var(--red-color);

@@ -18,34 +18,38 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <!-- font -->
     <style>
-        .sec2,
-        .sec3,
-        .sec4 {
+        .about,
+        .services,
+        .projects {
             min-height: 100vh;
             padding: 20px;
         }
 
-        .sec2 img,
-        .sec3 img {
+        .services {
+            background-color: #f5f0f0;
+        }
+
+        .about img,
+        .services img {
             max-width: 100%;
             height: auto;
         }
 
         @media (max-width: 768px) {
 
-            .sec2,
-            .sec3,
-            .sec5 {
+            .about,
+            .services,
+            .statistics {
                 min-height: auto;
             }
 
-            .sec2 .head h1,
-            .sec3 .head h1 {
+            .about .head h1,
+            .services .head h1 {
                 font-size: 24px;
             }
 
-            .sec2 .row div,
-            .sec3 .row div {
+            .about .row div,
+            .services .row div {
                 flex-basis: 100%;
                 max-width: 100%;
             }
@@ -53,7 +57,7 @@
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body data-bs-spy="scroll" data-bs-target=".navbar" dir="rtl">
     <!-- Start header -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white p-0" data-aos="fade-down">
         <div class="container">
@@ -65,28 +69,25 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="main">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">الرئيسة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#sec2">About</a>
+                        <a class="nav-link p-2 p-lg-3" href="#about">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#sec3">Services</a>
+                        <a class="nav-link p-2 p-lg-3" href="#services">خدماتنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#sec4">Project</a>
+                        <a class="nav-link p-2 p-lg-3" href="#projects">مشاريعنا</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#sec7">Contact</a>
+                        <a class="nav-link p-2 p-lg-3" href="#contact-us">تواصل معنا</a>
                     </li>
                 </ul>
-                <div class="search ps-3 pe-3 d-none d-lg-block">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <a class="btn rounded-pill main-btn" href="{{ route('getOffer') }}">Get offer</a>
+                <a class="btn rounded-pill main-btn me-auto" href="{{ route('getOffer') }}">احصل على عرض سعر</a>
             </div>
         </div>
     </nav>
@@ -106,10 +107,10 @@
                                     style="color: #b3050e; font-size: 70px;">Tech</span></h1>
                         </div>
                     </div>
-                    <h1 data-aos="fade-up" data-aos-duration="3000">Welcome In YakuTech </h1>
-                    <p data-aos="fade-up" data-aos-duration="3000">Build Your Own Project From Zero To Hero</p>
-                    <a class="btn rounded-pill main-btn " href="#" data-aos="fade-up" data-aos-duration="3000">Get
-                        Started</a>
+                    <h1 data-aos="fade-up" data-aos-duration="3000">أهلاً في ياقوتك </h1>
+                    <p data-aos="fade-up" data-aos-duration="3000">واجهتك الالكتروني اليوم هي جوهرتك الثمينة غداً</p>
+                    <a class="btn rounded-pill main-btn " href="#" data-aos="fade-up" data-aos-duration="3000">
+                        اصنع تجربتك الفريدة</a>
 
                 </div>
                 <div class="dr col-lg-6 d-none d-lg-block d-flex justify-content-center p-0" data-aos="zoom-in"
@@ -121,21 +122,18 @@
     </section>
     <!-- End Landing -->
     <!-- start about -->
-    <section class="sec2 " id="sec2">
+    <section class="about " id="about">
         <div class="container">
             <div class="head text-center mb4" data-aos="fade-up" data-aos-delay="100">
-                <h1>About Us</h1>
+                <h1>من نحن</h1>
                 <div class="divider"></div>
-                <p>Lorem voluptas praesentium cum vel architecto quasi a porro? Minus doloribus <br> accusamus similique
-                    tempora voluptatibus nihil beatae.</p>
-
+                <p>نحن فريق برمجي، نبني واجهتك الالكتروني التي تساهم بشكل فعال للتعريف بمنشأتك التجارية،
+                    ونستطيع تحويل أي فكرة برمجية من الخيال إلى الواقع </p>
             </div>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-right"
                     data-aos-delay="500">
-
                     <img src="{{ asset('assets/img/img-lad.png') }}" class="img-fluid h-100" alt="">
-
 
                 </div>
                 <div class="col-lg-6 ">
@@ -143,30 +141,24 @@
                         <div class="one mb-3" data-aos="fade-left" data-aos-delay="500">
                             <div class="icon d-flex align-items-baseline">
                                 <i class="fa-solid fa-briefcase"></i>
-                                <h3 class="ms-3">Our Mission</h3>
+                                <h3 class="me-3">مهمتنا</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem porro harum ab omnis
-                                sapiente vitae nam iusto ullam debitis minus hic blanditiis, reprehenderit eveniet nulla
-                                qui doloremque, voluptas facilis?</p>
+                            <p>رفع مستوى الوعي بأهمية الواجهة الالكتروني للمنشآت التجارية.</p>
                         </div>
                         <div class="one mb-3" data-aos="fade-left" data-aos-delay="700">
                             <div class="icon d-flex align-items-baseline">
                                 <i class="fa-solid fa-list-check"></i>
-                                <h3 class="ms-3">Our Plan</h3>
+                                <h3 class="me-3">خطتنا</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem porro harum ab omnis
-                                sapiente vitae nam iusto ullam debitis minus hic blanditiis, reprehenderit eveniet nulla
-                                qui doloremque, voluptas facilis?</p>
+                            <p>نسعى لنشر المعرفة بأهمية الموقع الالكتروني، وكشف آفاق جديدة لعملاؤنا.</p>
 
                         </div>
                         <div class="one mb-3" data-aos="fade-up" data-aos-delay="1000">
                             <div class="icon d-flex align-items-baseline">
                                 <i class="fa-regular fa-calendar-days"></i>
-                                <h3 class="ms-3">Our Vision</h3>
+                                <h3 class="me-3">رؤيتنا</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque autem porro harum ab omnis
-                                sapiente vitae nam iusto ullam debitis minus hic blanditiis, reprehenderit eveniet nulla
-                                qui doloremque, voluptas facilis?</p>
+                            <p>إدخال التقنية إلى كل منشأة تجارية، وزيادة الأرباح، وكسب علاقات جديدة.</p>
 
                         </div>
                     </div>
@@ -179,7 +171,7 @@
     </section>
     <!-- end about -->
     <!-- start service -->
-    <section class="sec3 " id="sec3">
+    <section class="services " id="services">
         <div class="container">
             <div class="head text-center" data-aos="fade-up" data-aos-delay="100">
                 <h1>Service</h1>
@@ -291,7 +283,7 @@
     <!-- end service -->
     <!-- start my project -->
 
-    <section class="sec4" id="sec4">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="head text-center" data-aos="zoom-in" data-aos-delay="100">
                 <h1>My Project</h1>
@@ -433,7 +425,7 @@
     <!-- end my project -->
 
     <!-- counter -->
-    <section class="sec5 d-flex justify-content-center align-items-center">
+    <section class="statistics d-flex justify-content-center align-items-center">
         <div class="container text-white text-center">
             <div class="head text-center" data-aos="zoom-in" data-aos-delay="100">
                 <h1>Counters</h1>
@@ -554,7 +546,7 @@
 
     <!-- end testimonials -->
     <!-- start contect -->
-    <section class="sec7" id="sec7">
+    <section class="contact-us" id="contact-us">
         <div class="container">
             <div class="head text-center" data-aos="fade-up" data-aos-delay="100">
                 <h1>Contact Us</h1>
